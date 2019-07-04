@@ -1,11 +1,7 @@
 package com.belhard.library.entity;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
-/**
- * Created by Raman Kashanok
- */
 public class Library
 {
 	private String      name;

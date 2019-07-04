@@ -69,3 +69,4 @@ public abstract class Print
 				", isAvailable=" + isAvailable;
 	}
 }
+

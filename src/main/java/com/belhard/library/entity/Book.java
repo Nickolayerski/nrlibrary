@@ -1,8 +1,5 @@
-package com.belhard.library.entity;
+package com.belhard.library.entity
 
-/**
- * Created by Raman Kashanok
- */
 public class Book extends Print
 {
 	private BookGenre genre;
@@ -47,5 +44,5 @@ public class Book extends Print
 				", author='" + author + '\'' +
 				", ISBN='" + ISBN + '\'' +
 				'}';
-	}
+ 	}
 }
