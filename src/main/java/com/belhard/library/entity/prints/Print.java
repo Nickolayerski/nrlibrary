@@ -1,4 +1,4 @@
-package com.belhard.library.entity;
+package com.belhard.library.entity.prints;
 
 /**
  * Created by Raman Kashanok
@@ -11,13 +11,6 @@ public abstract class Print
 	private Boolean isAvailable;
 
 	public Print(){
-		this.isAvailable = true;
-	}
-
-	public Print(String name, PrintType type)
-	{
-		this.name = name;
-		this.type = type;
 		this.isAvailable = true;
 	}
 

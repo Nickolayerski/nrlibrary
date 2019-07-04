@@ -1,7 +1,9 @@
 package com.belhard.library.entity;
 
+import com.belhard.library.entity.prints.Print;
+import com.belhard.library.entity.users.User;
+
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by Raman Kashanok

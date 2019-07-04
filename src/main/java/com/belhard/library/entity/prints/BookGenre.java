@@ -1,4 +1,4 @@
-package com.belhard.library.entity;
+package com.belhard.library.entity.prints;
 
 /**
  * Created by Raman Kashanok

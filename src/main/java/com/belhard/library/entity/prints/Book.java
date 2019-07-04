@@ -1,4 +1,4 @@
-package com.belhard.library.entity;
+package com.belhard.library.entity.prints;
 
 /**
  * Created by Raman Kashanok
@@ -43,7 +43,7 @@ public class Book extends Print
 	{
 		return "Book{" +
 				super.toString() +
-				"genre=" + genre +
+				", genre=" + genre +
 				", author='" + author + '\'' +
 				", ISBN='" + ISBN + '\'' +
 				'}';
