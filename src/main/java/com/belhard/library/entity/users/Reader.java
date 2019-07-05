@@ -10,7 +10,7 @@ import java.util.List;
 public class Reader extends User
 {
 	private Integer number;
-
+	private Gender gender;
 	private List<Print> rentedPrints;
 
 	public Reader()
@@ -18,10 +18,11 @@ public class Reader extends User
 		super();
 	}
 
-	public Reader(String login, String password, Integer number)
+	public Reader(String login, String password, Integer number, Gender gender)
 	{
 		super(login, password, UserRole.READER);
 		this.number = number;
+		this.gender = gender;
 	}
 
 	public Integer getNumber()
@@ -44,11 +45,22 @@ public class Reader extends User
 		this.rentedPrints = rentedPrints;
 	}
 
+	public Gender getGender()
+	{
+		return gender;
+	}
+
+	public void setGender(Gender gender)
+	{
+		this.gender = gender;
+	}
+
 	@Override public String toString()
 	{
 		return "Reader{" +
 				super.toString() +
 				", number=" + number +
-				", rentedPrints=" + rentedPrints + '}';
+				", rentedPrints=" + rentedPrints +
+				", gender=" + gender + '}';
 	}
 }

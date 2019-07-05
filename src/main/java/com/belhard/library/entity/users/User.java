@@ -8,6 +8,7 @@ public abstract class User
 	private Long id;
 	private String name;
 	private UserRole role;
+	private Gender gender;
 
 	private String login;
 	private String password;
@@ -48,6 +49,16 @@ public abstract class User
 		return role;
 	}
 
+	public Gender getGender()
+	{
+		return gender;
+	}
+
+	public void setGender(Gender gender)
+	{
+		this.gender = gender;
+	}
+
 	public String getLogin()
 	{
 		return login;
@@ -73,5 +84,35 @@ public abstract class User
 		return  "id=" + id +
 				", name='" + name + '\'' +
 				", role=" + role;
+	}
+
+	@Override public boolean equals(Object o)
+	{
+		if (this == o)
+			return true;
+		if (!(o instanceof User))
+			return false;
+
+		User user = (User) o;
+
+		if (getId() != null ? !getId().equals(user.getId()) : user.getId() != null)
+			return false;
+		if (getName() != null ? !getName().equals(user.getName()) : user.getName() != null)
+			return false;
+		if (getRole() != user.getRole())
+			return false;
+		if (getGender() != user.getGender())
+			return false;
+		return getLogin() != null ? getLogin().equals(user.getLogin()) : user.getLogin() == null;
+	}
+
+	@Override public int hashCode()
+	{
+		int result = getId() != null ? getId().hashCode() : 0;
+		result = 31 * result + (getName() != null ? getName().hashCode() : 0);
+		result = 31 * result + (getRole() != null ? getRole().hashCode() : 0);
+		result = 31 * result + (getGender() != null ? getGender().hashCode() : 0);
+		result = 31 * result + (getLogin() != null ? getLogin().hashCode() : 0);
+		return result;
 	}
 }
